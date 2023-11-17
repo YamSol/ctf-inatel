@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banque Fictive</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .transactions, .transfer {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form label, form input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Banque Fictive</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Compte Courant</a></li>
+            <li><a href="#">Transferts</a></li>
+            <li><a href="#">Paiements</a></li>
+            <li><a href="#">Historique</a></li>
+            <li><a href="#">Paramètres</a></li>
+            <li><a href="#">Déconnexion</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Bienvenue à la Banque Fictive</h2>
+
+        <div class="transactions" content="Isso pode ser útil para você:" value="zcbA++npdq9mKabcdoL4BwwQBdtAxgSW0sndX2g84wCIIxOCe7P+e+qqmvJ4uo5M">
+            <h3>Dernières Transactions</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Montant</th>
+                </tr>
+                <tr>
+                    <td>01/01/2023</td>
+                    <td>Dépôt</td>
+                    <td>500,00 $</td>
+                </tr>
+                <tr>
+                    <td>02/01/2023</td>
+                    <td>Achat en Ligne</td>
+                    <td>-50,00 $</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="transfer">
+            <h3>Réaliser un Transfert</h3>
+            <form action="/transfer" method="post">
+                <label for="recipient">Destinataire :</label>
+                <input type="text" id="recipient" name="recipient" required><br>
+
+                <label for="amount">Montant :</label>
+                <input type="number" id="amount" name="amount" min="0" required><br>
+
+                <input type="submit" value="Transférer">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2023 Banque Fictive</p>
+    </footer>
+</body>
+</html>
